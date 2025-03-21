@@ -15,7 +15,7 @@ public abstract class Title {
     }
 
     protected double convertLiteratureType(){
-        double royaltyValue = 0.0;
+        double royaltyValue;
         switch (this.literatureType) {
             case "BI":
                 royaltyValue = 3.0;

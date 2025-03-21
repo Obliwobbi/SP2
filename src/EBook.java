@@ -1,7 +1,7 @@
 public class EBook extends NetBook {
 
     private int characters;
-    private boolean illustrated = true;
+    private final boolean illustrated;
 
     public EBook(String title, String literatureType,int availability, int reach, int use, int characters, boolean illustrated){
         super(title,literatureType,availability,reach,use);
