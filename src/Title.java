@@ -1,7 +1,7 @@
 public abstract class Title {
     private String title;
     protected String literatureType;
-    private final double pointRate = 0.067574; // Rate as of 2025
+    private static final double pointRate = 0.067574; // Rate as of 2025 - Not set in method to simulate being a long way down into the code, so for easier changing next year.
 
     public Title(String title, String literatureType){
         this.title = title;
@@ -32,6 +32,9 @@ public abstract class Title {
             case "FAG":
                 royaltyValue = 1.0;
                 break;
+            default:
+                royaltyValue = 0.0;
+                System.err.println("Literature Type not found");
         }
         return royaltyValue;
     }

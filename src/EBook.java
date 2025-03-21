@@ -9,12 +9,12 @@ public class EBook extends NetBook {
         this.illustrated = illustrated;
     }
 
-    private double calculatePages(){
-        if (!illustrated){
-            return this.characters/1800+20;
-        } else {
-            return (this.characters/1800+20) * 1.1; // If the eBook is illustrated + 10%
+    public double calculatePages(){
+        double pages = (this.characters/1800.0)+20;
+        if (illustrated){
+            pages *= 1.1;
         }
+        return pages;
     }
 
     @Override
