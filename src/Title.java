@@ -34,7 +34,7 @@ public abstract class Title {
                 break;
             default:
                 royaltyValue = 0.0;
-                System.err.println("Literature Type not found");
+                System.err.println( this.title +" "+ this.literatureType + " - Literature Type not found");
         }
         return royaltyValue;
     }
